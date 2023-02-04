@@ -1,9 +1,65 @@
 package ShoppingApp;
 
 public class User {
+    private String name;
+    private String address;
+    private Cart cart;
+    private double shippingCost;
+    private UserType userType;
 
+    public String getName() {
+        return name;
+    }
 
-/** This class has
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public Cart getCart() {
+        return cart;
+    }
+
+    public void setCart(Cart cart) {
+        this.cart = cart;
+    }
+
+    public double getShippingCost() {
+        return shippingCost;
+    }
+
+    public void setShippingCost(double shippingCost) {
+        this.shippingCost = shippingCost;
+    }
+
+    public UserType getUserType() {
+        return userType;
+    }
+
+    public void setUserType(UserType userType) {
+        this.userType = userType;
+    }
+
+    public User(String name, String address) {
+        this.name = name;
+        this.address = address;
+    }
+    public void addToCart(Product product){
+
+    }
+
+    public void removeFromCard(Product product){
+
+    }
+
+    /** This class has
  *             private String name, address;
  *             private Cart cart;
  *             private double shippingCost;
