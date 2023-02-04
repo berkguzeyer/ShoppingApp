@@ -3,6 +3,7 @@ package ShoppingApp;
 
 public class Seller{
     private double balance;
+    private double feeFromPerSale;
 
 /** This is an abstract class and it inherits from User class. It has
  *                      private list of Product named products,
