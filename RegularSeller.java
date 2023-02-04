@@ -1,7 +1,11 @@
 package ShoppingApp;
 
-public class RegularSeller {
+public class RegularSeller extends User {
 
+    public RegularSeller() {
+        super();
+
+    }
     /** This class inherits from Seller class. It has no additional variables.
      * Create a corresponding constructor with super and in the constructor
      *                  set feeFromPerSale to 0.10,
