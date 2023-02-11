@@ -1,5 +1,7 @@
 package ShoppingApp;
 
+import java.util.List;
+
 public class User {
     private String name;
     private String address;
@@ -50,13 +52,20 @@ public class User {
     public User(String name, String address) {
         this.name = name;
         this.address = address;
+        this.cart = new Cart();
     }
     public void addToCart(Product product){
-
+        List<Product> cartProducts =  cart.getCartProducts();
+        cartProducts.add(product);
+        cart.setCartProducts(cartProducts);
+        cart.setTotal(cart.getTotal() + product.getPrice());
     }
 
-    public void removeFromCard(Product product){
-
+    public void removeFromCart(Product product){
+        List<Product> cartProducts =  cart.getCartProducts();
+        cartProducts.remove(product);
+        cart.setCartProducts(cartProducts);
+        cart.setTotal(cart.getTotal()-product.getPrice());
     }
 
     /** This class has
